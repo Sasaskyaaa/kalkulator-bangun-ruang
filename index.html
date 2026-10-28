@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kalkulator Bangun Ruang</title>
+
+    <!-- Memanggil file CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Memanggil library jQuery terlebih dahulu -->
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="header">
+            <h1>Kalkulator Bangun Ruang</h1>
+            <p>
+                Hitung volume dan luas permukaan
+                bangun ruang dengan mudah.
+            </p>
+        </header>
+
+        <section class="form-card">
+
+            <label for="bangun">Pilih Bangun Ruang</label>
+
+            <select id="bangun">
+                <option value="kubus">Kubus</option>
+                <option value="balok">Balok</option>
+                <option value="tabung">Tabung</option>
+                <option value="bola">Bola</option>
+                <option value="kerucut">Kerucut</option>
+                <option value="prisma">Prisma Segitiga</option>
+                <option value="limas4">Limas Segiempat</option>
+                <option value="limas3">
+                    Limas Segitiga Beraturan
+                </option>
+            </select>
+
+            <form id="formHitung" novalidate>
+
+                <!-- Input dibuat otomatis oleh jQuery -->
+                <div id="inputArea"></div>
+
+                <!-- Pesan validasi -->
+                <p id="pesanValidasi" role="status"></p>
+
+                <button type="submit" id="btnHitung">
+                    Hitung
+                </button>
+
+            </form>
+
+        </section>
+
+        <section
+            id="hasil"
+            class="hasil-card"
+            aria-live="polite">
+
+            <h2>Hasil Perhitungan</h2>
+            <p>Masukkan semua ukuran untuk melihat hasil.</p>
+
+        </section>
+
+        <footer>
+            <p>Mini Project JavaScript dan jQuery</p>
+        </footer>
+
+    </main>
+
+    <!-- Memanggil JavaScript setelah elemen HTML tersedia -->
+    <script src="script.js"></script>
+
+</body>
+</html>
